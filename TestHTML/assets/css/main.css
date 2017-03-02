@@ -1,0 +1,28 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  outline-style: none;
+  outline: none;
+}
+.navbar {
+  min-height: 50px;
+  padding: 5px 0;
+}
+.navbar-brand,
+.navbar-nav > li > a {
+  line-height: 50px;
+}
+/*==========  Responsive  ==========*/
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
