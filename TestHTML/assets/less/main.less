@@ -25,13 +25,37 @@ a {
 
 // MODULE: MODULE STYLE
 // -------------------------------------
+header {
+	background: url("../img/1.jpg") no-repeat left top;
+	height: 800px;
+}
+.top-header	{
+	height: inherit;
+}
 .navbar {
-	min-height: 50px;
-	padding: 5px 0;
+	height: 70px;
+	margin: 0;
 }
 .navbar-brand, .navbar-nav > li > a {
-	line-height: 50px;
+	line-height: 70px;
+	padding: 0 15px;
+	color: #fff;
+	font-size: 13pt;
 }
+
+.nav > li > a:hover, .nav > li > a:focus {
+	background: transparent;
+	text-decoration: none;
+	border-top: solid 1px @border-top-color;
+}
+
+.navbar-brand {
+	font-family: "Pacifico";
+	font-size: 28pt;
+	color: #fff;
+}
+
+
 
 /*==========  Responsive  ==========*/
 

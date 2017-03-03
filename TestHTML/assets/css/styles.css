@@ -8773,34 +8773,6 @@ button.close {
   overflow: visible;
   clip: auto;
 }
-body {
-  font-family: 'Open Sans', sans-serif;
-}
-ul,
-li {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-  outline-style: none;
-  outline: none;
-}
-.navbar {
-  min-height: 50px;
-  padding: 5px 0;
-}
-.navbar-brand,
-.navbar-nav > li > a {
-  line-height: 50px;
-}
-/*==========  Responsive  ==========*/
-/* Large Devices, Wide Screens */
-/* Medium Devices, Desktops */
-/* Small Devices, Tablets */
-/* Extra Small Devices, Phones */
-/* Custom, iPhone Retina */
 @-ms-viewport {
   width: device-width;
 }
@@ -9097,3 +9069,78 @@ a {
 .affix {
   position: fixed;
 }
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  outline-style: none;
+  outline: none;
+}
+header {
+  background: url("../img/1.jpg") no-repeat left top;
+  height: 800px;
+}
+.top-header {
+  height: inherit;
+}
+.navbar {
+  height: 70px;
+  margin: 0;
+}
+.navbar .navbar-header .navbar-brand {
+  font-family: "Pacifico";
+  font-size: 28pt;
+  color: #fff;
+  line-height: 70px;
+  padding: 0 15px;
+}
+.navbar .navbar-header > span {
+  color: #787e7f;
+  font-size: 13pt;
+  line-height: 70px;
+  position: relative;
+}
+.navbar .navbar-header > span:before {
+  content: "|";
+  color: #17526e;
+  display: inline-block;
+  height: 10px;
+  margin-right: 10px;
+}
+.navbar-nav > li > a {
+  line-height: 70px;
+  padding: 0 15px;
+  color: #fff;
+  font-size: 13pt;
+}
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav > li > a.active {
+  background: transparent;
+  text-decoration: none;
+  position: relative;
+}
+.nav > li > a:hover:before,
+.nav > li > a:focus:before,
+.nav > li > a.active:before {
+  content: '';
+  width: 80%;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  height: 2px;
+  background-color: #32b0ee;
+}
+/*==========  Responsive  ==========*/
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */

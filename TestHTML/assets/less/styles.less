@@ -4,6 +4,117 @@
 @import "./bootstrap.less";				
 @import "../fonts/font-awesome/less/font-awesome.less";	
 @import "./custom-variable.less";		// My Variable
-@import "./main.less";							// My style
+//@import "./main.less";							// My style
 @import "./responsive-utilities.less";
 @import "./utilities.less";
+
+
+
+//
+// MAIN STYLE
+// --------------------------------------------------
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+//
+// COMMON: COMMON STYLE
+// -------------------------------------
+ul, li {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+	outline-style: none;
+	outline: none;
+}
+
+// MAIN: MAIN STYLE
+// -------------------------------------
+header {
+	background: url("../img/1.jpg") no-repeat left top;
+	height: 800px;
+}
+.top-header	{
+	height: inherit;
+}
+.navbar {
+	height: 70px;
+	margin: 0;
+  .navbar-header {
+    .navbar-brand {
+      font-family: "Pacifico";
+      font-size: 28pt;
+      color: #fff;
+      line-height: 70px;
+	    padding: 0 15px;
+    }
+    > span {
+      color: #787e7f;
+      font-size: 13pt;
+      line-height: 70px;
+      position: relative;
+      &:before {
+        content: "|";
+        color: #17526e;
+        // border-bottom: 1px solid #17526e;
+        // box-shadow: 0 1px 0 #0c2730;
+        display: inline-block;
+        height: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.navbar-nav > li > a {
+  line-height: 70px;
+	padding: 0 15px;
+	color: #fff;
+	font-size: 13pt;
+}
+
+.nav > li > a:hover, .nav > li > a:focus, .nav > li > a.active {
+	background: transparent;
+	text-decoration: none;
+  position: relative;
+	&:before {
+    content: '';
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    height: 2px;
+    background-color: @border-top-color;
+  }
+}
+
+
+
+/*==========  Responsive  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+    
+}
