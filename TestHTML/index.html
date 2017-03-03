@@ -2,65 +2,711 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Brandi</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brandi</title>
 
-	<!-- Bootstrap -->
-	<link href="assets/css/styles.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Pacifico" rel="stylesheet"> 
+  <!-- Bootstrap -->
+  <link href="assets/css/styles.css" rel="stylesheet">
+  <link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Pacifico" rel="stylesheet"> 
+  <link href="assets/js/slick/slick.css" rel="stylesheet">
+  <link href="assets/js/slick/slick-theme.css" rel="stylesheet">
 
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.min.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.min.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
 
-	<!-- Favicon -->
-	<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-precomposed.png">
-	<link rel="icon" href="assets/ico/favicon.ico">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-precomposed.png">
+  <link rel="icon" href="assets/ico/favicon.ico">
 </head>
 
 <body>
-	<div class="wrapper">
-		<header>
-			<div class="top-header">
-				<div class="container">
-					<nav class="navbar">
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#brandi-nav">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>                        
-							</button>
-							<a class="navbar-brand" href="#">Brandi</a>
-							<span>I’am your tag line</span>
-						</div>
-						<div class="collapse navbar-collapse" id="brandi-nav">
-							<ul class="nav navbar-nav navbar-right">
-								<li><a href="#" class="active">Home</a></li>
-								<li><a href="#">Features</a></li>
-								<li><a href="#">Works</a></li>
-								<li><a href="#">Team</a></li>
-								<li><a href="#">Contact</a></li>
-							</ul>
-						</div>
-					</nav>
-					<div class="slider-banner">
-						Slider
+  <div class="wrapper">
+    <header>
+      <div class="top-header">
+        <div class="container">
+          <nav class="navbar">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#brandi-nav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href="#">Brandi</a>
+              <span>I’am your tag line</span>
+            </div>
+            <div class="collapse navbar-collapse" id="brandi-nav">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="slide-banner">
+            <div class="carousel slide" data-ride="carousel" id="slide-carousel">
+              <!-- Right Carousel Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#slide-carouse" data-slide-to="0" class="active"></li>
+                <li data-target="#slide-carouse" data-slide-to="1"></li>
+                <li data-target="#slide-carouse" data-slide-to="2"></li>
+              </ol>
+              
+              <!-- Carousel Slides -->
+              <div class="carousel-inner">
+              
+                <!-- Slide 1 -->
+                <div class="item active">
+                  <div class="carousel-caption">
+                    <h1>Meet <span>Brandi!</span></h1>
+                    <h2><span>/Create</span> one page template.</h2>
+                    <h3>We are a team of professionals</h3>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="item">
+                  <div class="carousel-caption">
+                    <h1>Meet <span>Brandi!</span></h1>
+                    <h2><span>/Create</span> one page template.</h2>
+                    <h3>We are a team of professionals</h3>
+                  </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="item">
+                  <div class="carousel-caption">
+                    <h1>Meet <span>Brandi!</span></h1>
+                    <h2><span>/Create</span> one page template.</h2>
+                    <h3>We are a team of professionals</h3>
+                  </div>
+                </div>
+              </div>
+            </div>     
+          </div>
+          <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+          </ul>
+        </div>  
+      </div>  
+    </header>
+    <main>
+      <section id="features">
+        <h1>Features</h1>
+        <p><i class="fa fa-heart-o" aria-hidden="true"></i></p>
+        <div class="container">
+          <div class="features-content">
+            <div class="slide">
+              <div class="feature-box">
+                <div class="feature-icon">
+                  <i class="icon-branding"></i>
+                </div>
+                <div class="feature-desc">
+                  <h3>Branding</h3>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="feature-box">
+                <div class="feature-icon">
+                  <i class="icon-development"></i>
+                </div>
+                <div class="feature-desc">
+                  <h3>Development</h3>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="feature-box">
+                <div class="feature-icon">
+                  <i class="icon-consulting"></i>
+                </div>
+                <div class="feature-desc">
+                  <h3>Consulting</h3>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="slide">
+              <div class="feature-box">
+                <div class="feature-icon">
+                  <i class="icon-branding"></i>
+                </div>
+                <div class="feature-desc">
+                  <h3>Branding</h3>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="feature-box">
+                <div class="feature-icon">
+                  <i class="icon-development"></i>
+                </div>
+                <div class="feature-desc">
+                  <h3>Development</h3>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="feature-box">
+                <div class="feature-icon">
+                  <i class="icon-consulting"></i>
+                </div>
+                <div class="feature-desc">
+                  <h3>Consulting</h3>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="slide">
+              <div class="feature-box">
+                <div class="feature-icon">
+                  <i class="icon-branding"></i>
+                </div>
+                <div class="feature-desc">
+                  <h3>Branding</h3>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="feature-box">
+                <div class="feature-icon">
+                  <i class="icon-development"></i>
+                </div>
+                <div class="feature-desc">
+                  <h3>Development</h3>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="feature-box">
+                <div class="feature-icon">
+                  <i class="icon-consulting"></i>
+                </div>
+                <div class="feature-desc">
+                  <h3>Consulting</h3>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> <!-- /end feature -->
+
+      <section id="works" class="clearfix">
+        <div class="container">
+          <h1>Works</h1>
+          <p><i class="fa fa-heart-o" aria-hidden="true"></i></p>
+          <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</h3>
+        </div>
+        <div class="projects">
+          <ul id="filters" class="clearfix">
+            <li><span class="filter active" data-filter="app card icon logo web">All</span></li>
+            <li><span class="filter" data-filter="app">App</span></li>
+            <li><span class="filter" data-filter="card">Card</span></li>
+            <li><span class="filter" data-filter="icon">Icon</span></li>
+            <li><span class="filter" data-filter="logo">Logo</span></li>
+            <li><span class="filter" data-filter="web">Web</span></li>
+          </ul>
+          <div id="portfoliolist">
+    
+            <div class="portfolio logo" data-cat="logo">
+              <div class="portfolio-wrapper">       
+                <img src="assets/img/portfolios/logo/5.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>        
+
+            <div class="portfolio app" data-cat="app">
+              <div class="portfolio-wrapper">     
+                <img src="assets/img/portfolios/app/1.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>    
+            
+            <div class="portfolio web" data-cat="web">
+              <div class="portfolio-wrapper">           
+                <img src="assets/img/portfolios/web/4.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>        
+            
+            <div class="portfolio card" data-cat="card">
+              <div class="portfolio-wrapper">     
+                <img src="assets/img/portfolios/card/1.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>  
+                  
+            <div class="portfolio app" data-cat="app">
+              <div class="portfolio-wrapper">
+                <img src="assets/img/portfolios/app/3.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>      
+            
+            <div class="portfolio card" data-cat="card">
+              <div class="portfolio-wrapper">     
+                <img src="assets/img/portfolios/card/4.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>  
+            
+            <div class="portfolio card" data-cat="card">
+              <div class="portfolio-wrapper">     
+                <img src="assets/img/portfolios/card/5.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>  
+            
+            <div class="portfolio logo" data-cat="logo">
+              <div class="portfolio-wrapper">     
+                <img src="assets/img/portfolios/logo/1.jpg" alt="" />
+                <div class="info">
+                <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>                                                                              
+            
+            <div class="portfolio app" data-cat="app">
+              <div class="portfolio-wrapper">     
+                <img src="assets/img/portfolios/app/2.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>                            
+            
+            <div class="portfolio card" data-cat="card">
+              <div class="portfolio-wrapper">     
+                <img src="assets/img/portfolios/card/2.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>        
+
+            <div class="portfolio logo" data-cat="logo">
+              <div class="portfolio-wrapper">     
+                <img src="assets/img/portfolios/logo/6.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>                                  
+
+            <div class="portfolio logo" data-cat="logo">
+              <div class="portfolio-wrapper">     
+                <img src="assets/img/portfolios/logo/7.jpg" alt="" />
+                <div class="info">
+                <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>                          
+            
+            <div class="portfolio icon" data-cat="icon">
+              <div class="portfolio-wrapper">     
+                <img src="assets/img/portfolios/icon/4.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>              
+
+            <div class="portfolio web" data-cat="web">
+              <div class="portfolio-wrapper">           
+                <img src="assets/img/portfolios/web/3.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>                                                
+
+            <div class="portfolio icon" data-cat="icon">
+              <div class="portfolio-wrapper">     
+                <img src="assets/img/portfolios/icon/1.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>        
+            
+            <div class="portfolio web" data-cat="web">
+              <div class="portfolio-wrapper">           
+                <img src="assets/img/portfolios/web/2.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>                                  
+
+            <div class="portfolio icon" data-cat="icon">
+              <div class="portfolio-wrapper">
+                <img src="assets/img/portfolios/icon/2.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>                                                                                                                                
+
+            <div class="portfolio icon" data-cat="icon">
+              <div class="portfolio-wrapper">           
+                <img src="assets/img/portfolios/icon/5.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>      
+            
+            <div class="portfolio web" data-cat="web">
+              <div class="portfolio-wrapper">           
+                <img src="assets/img/portfolios/web/1.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>                  
+            
+            <div class="portfolio logo" data-cat="logo">
+              <div class="portfolio-wrapper">     
+                <img src="assets/img/portfolios/logo/3.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>                                  
+
+            <div class="portfolio logo" data-cat="logo">
+              <div class="portfolio-wrapper">     
+                <img src="assets/img/portfolios/logo/4.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>                                                        
+            
+            <div class="portfolio icon" data-cat="icon">
+              <div class="portfolio-wrapper">     
+                <img src="assets/img/portfolios/icon/3.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>                                                
+            
+            <div class="portfolio card" data-cat="card">
+              <div class="portfolio-wrapper">     
+                <img src="assets/img/portfolios/card/3.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>  
+
+            <div class="portfolio logo" data-cat="logo">
+              <div class="portfolio-wrapper">     
+                <img src="assets/img/portfolios/logo/2.jpg" alt="" />
+                <div class="info">
+                  <i class="icon-eyes"></i>
+                  <h3>Labore et dolore magnam</h3>
+                  <p>Photography</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section> <!-- /end works -->
+
+      <section id="our-team">
+        <div class="container">
+          <h1>Meet Our Team</h1>
+          <p><i class="fa fa-heart-o" aria-hidden="true"></i></p>
+          <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</h3>
+					<div class="our-team-slider">
+						<div class="slider-member">
+              <img src="assets/img/john.jpg" alt="" />
+              <div class="text-center">
+                <h3>John Filmr Doe</h3>
+                <p>Managing Director</p>
+              </div>
+              <div class="resume">
+                <h3>Nemo enim ipsam voluptatem quia voluptas</h3>
+                <p>sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+                <ul class="socials">
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>  
+            <div class="slider-member">
+              <img src="assets/img/chystine.jpg" alt="" />
+              <div class="text-center">
+                <h3>Chystine Hineu</h3>
+                <p>Lead Designer</p>
+              </div>
+              <div class="resume">
+                <h3>Nemo enim ipsam voluptatem quia voluptas</h3>
+                <p>sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+                <ul class="socials">
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="slider-member">
+              <img src="assets/img/martin.jpg" alt="" />
+              <div class="text-center">
+                <h3>Martin Matrone</h3>
+                <p>Lead Developer</p>
+              </div>
+              <div class="resume">
+                <h3>Nemo enim ipsam voluptatem quia voluptas</h3>
+                <p>sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+                <ul class="socials">
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="slider-member">
+              <img src="assets/img/steve.jpg" alt="" />
+              <div class="text-center">
+                <h3>Steve Flaulkin</h3>
+                <p>Sr. UI Designer</p>
+              </div>
+              <div class="resume">
+                <h3>Nemo enim ipsam voluptatem quia voluptas</h3>
+                <p>sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+                <ul class="socials">
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+						<div class="slider-member">
+              <img src="assets/img/john.jpg" alt="" />
+              <div class="text-center">
+                <h3>John Filmr Doe</h3>
+                <p>Managing Director</p>
+              </div>
+              <div class="resume">
+                <h3>Nemo enim ipsam voluptatem quia voluptas</h3>
+                <p>sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+                <ul class="socials">
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>  
+            <div class="slider-member">
+              <img src="assets/img/chystine.jpg" alt="" />
+              <div class="text-center">
+                <h3>Chystine Hineu</h3>
+                <p>Lead Designer</p>
+              </div>
+              <div class="resume">
+                <h3>Nemo enim ipsam voluptatem quia voluptas</h3>
+                <p>sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+                <ul class="socials">
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="slider-member">
+              <img src="assets/img/martin.jpg" alt="" />
+              <div class="text-center">
+                <h3>Martin Matrone</h3>
+                <p>Lead Developer</p>
+              </div>
+              <div class="resume">
+                <h3>Nemo enim ipsam voluptatem quia voluptas</h3>
+                <p>sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+                <ul class="socials">
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="slider-member">
+              <img src="assets/img/steve.jpg" alt="" />
+              <div class="text-center">
+                <h3>Steve Flaulkin</h3>
+                <p>Sr. UI Designer</p>
+              </div>
+              <div class="resume">
+                <h3>Nemo enim ipsam voluptatem quia voluptas</h3>
+                <p>sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+                <ul class="socials">
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+						<div class="slider-member">
+              <img src="assets/img/john.jpg" alt="" />
+              <div class="text-center">
+                <h3>John Filmr Doe</h3>
+                <p>Managing Director</p>
+              </div>
+              <div class="resume">
+                <h3>Nemo enim ipsam voluptatem quia voluptas</h3>
+                <p>sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+                <ul class="socials">
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>  
+            <div class="slider-member">
+              <img src="assets/img/chystine.jpg" alt="" />
+              <div class="text-center">
+                <h3>Chystine Hineu</h3>
+                <p>Lead Designer</p>
+              </div>
+              <div class="resume">
+                <h3>Nemo enim ipsam voluptatem quia voluptas</h3>
+                <p>sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+                <ul class="socials">
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="slider-member">
+              <img src="assets/img/martin.jpg" alt="" />
+              <div class="text-center">
+                <h3>Martin Matrone</h3>
+                <p>Lead Developer</p>
+              </div>
+              <div class="resume">
+                <h3>Nemo enim ipsam voluptatem quia voluptas</h3>
+                <p>sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+                <ul class="socials">
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="slider-member">
+              <img src="assets/img/steve.jpg" alt="" />
+              <div class="text-center">
+                <h3>Steve Flaulkin</h3>
+                <p>Sr. UI Designer</p>
+              </div>
+              <div class="resume">
+                <h3>Nemo enim ipsam voluptatem quia voluptas</h3>
+                <p>sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
+                <ul class="socials">
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+						
 					</div>
-				</div>	
-			</div>	
-		</header>
-		<main>
-			main content
-		</main>
-	</div>
+        </div>
+      </section> <!-- /end our team -->
+    </main>
+  </div>
   <!-- Javascript -->
   <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.easing.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+  <script src="assets/js/slick/slick.min.js"></script>
+  <script src="assets/js/jquery.mixitup.min.js"></script>
+  <script src="assets/js/bootstrap.custom.js"></script>
 </body>
 
 </html>

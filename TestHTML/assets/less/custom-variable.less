@@ -11,3 +11,32 @@
 
 @width-sidebar: 170px;
 @gutter-main-layout: 35px;
+
+.heading-title {
+  color: @text-color-section;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 28pt;
+  font-weight: 700;
+}
+
+.heading-sub-icon {
+  color: #c3c6c7;
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  &:after, &:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    border-bottom: 1px solid #c3c6c7;
+    width: 80px;
+    top: 50%;
+  }
+  &:after {
+    right: 52%;
+  }
+  &:before {
+    left: 52%;
+  }
+}
