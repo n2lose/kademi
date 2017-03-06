@@ -124,23 +124,23 @@ header {
       height: inherit;
       > .item {
         h1, h2, h3 {
-          font-family: "Open Sans Light";
+          font-weight: 300;
         }
         .carousel-caption { 
           > h1 {
-            font-size: 62pt;
+            font-size: 48pt;
             > span {
-              font-weight: 700;
+              font-weight: 800;
             }
           }
           > h2 {
-            font-size: 48pt;
+            font-size: 32pt;
             > span {
               color: #0fde95;
             }
           }
           > h3 {
-            font-size: 18pt;
+            font-size: 16pt;
             position: relative;
             &:after, &:before {
               content: "";
@@ -200,10 +200,11 @@ header {
     list-style-type: none;
     display: inline;
     > a {
-      color: #4f555d;
+      color: #fff;
       font-size: 18pt;
+      opacity: 0.6;
       &:hover {
-        color: @text-color;
+        opacity: 1;
       }
     }
   }
@@ -313,6 +314,7 @@ header {
           background: #666;
           cursor:pointer;
           > img {
+            width: 100%;
             max-width:100%;
             position: relative;
           }
@@ -460,9 +462,17 @@ header {
         font-weight: 600;
         font-size: 48pt;
         margin-top: 50px;
+
+        @media screen and (max-width : 1200px) {
+          font-size: 32pt;
+        }
       }
       > h3 {
         text-transform: uppercase;
+
+        @media screen and (max-width : 1200px) {
+          font-size: 15pt;
+        }
       }
     }
   }
@@ -554,6 +564,7 @@ header {
         }
       }
       .contact-socials {
+        .make-xs-column(12);
         .make-sm-column(1);
         > ul {
           margin-top: 25%;
@@ -570,12 +581,11 @@ header {
       }
     }
   }
-  .map {
-    background: url("../img/map.jpg") no-repeat left top;
-    background-size: cover;
-    min-height: 215px;
+
+  #map {
     width: 100%;
-    display: block;
+    height: 300px;
+    background-color: grey;
     margin-top: 100px;
   }
 }
@@ -710,12 +720,23 @@ footer {
         }
       }
   }
-  .navbar-nav>li>a.active {
-    
-  }
   .collapse.in{
       display:block !important;
   }
+
+  .slide-banner {
+    #slide-carousel {
+      .carousel-inner {
+        > .item .carousel-caption {
+          > h3 {
+            &:after, &:before {
+              content: none !important;
+            }
+          }
+        }
+      }
+    }
+  } 
 }
 
 /* Small Devices, Tablets */
@@ -723,6 +744,7 @@ footer {
   #discuss {
     .contact-socials {
       > ul {
+        margin-top: 10% !important;
         > li {
           display: inline-block;
           margin: 5px 10px !important;
@@ -730,14 +752,24 @@ footer {
       }
     }
   } 
-  .map {
-    margin: 25px !important;
+  #map {
+    margin: 25px 0 !important;
+  }
+  #portfoliolist {
+    .portfolio {
+      width:50% !important;
+    }
   }
 }
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
-
+  
+  #portfoliolist {
+    .portfolio {
+      width:100% !important;
+    }
+  }
 }
 
 /* Custom, iPhone Retina */ 

@@ -16,7 +16,6 @@ var filterList = {
   },
   
   hoverEffect: function () {
-  
     // Simple parallax effect
     $('#portfoliolist .portfolio').hover(
       function () {
@@ -28,9 +27,7 @@ var filterList = {
         $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');               
       }   
     );        
-  
   }
-
 };
 
 !function ($) {
@@ -68,9 +65,6 @@ var filterList = {
             slidesToScroll: 1
           }
         }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
       ]
     });
 
@@ -110,6 +104,36 @@ var filterList = {
 
     // Run the show!
     filterList.init();
+
+    // if HTML DOM Element that contains the map is found...
+    if (document.getElementById('map')){
+    
+        // Coordinates to center the map
+        var myLatlng = new google.maps.LatLng(5.376964, 100.399383);
+    
+        // Other options for the map, pretty much selfexplanatory
+        var mapOptions = {
+            zoom: 14,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+    
+        // Attach a map to the DOM Element, with the defined settings
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+        var marker = new RichMarker({
+           position: myLatlng,
+            map: map,   
+            draggable: false,
+            flat:true,
+            anchor: RichMarkerPosition.MIDDLE,
+            content: '<i class="fa fa-map-marker fa-3x" style="color: #0eb493;" ></i>'
+        });
+        
+        marker.setMap( map );
+
+    }
+
 
   });
 
