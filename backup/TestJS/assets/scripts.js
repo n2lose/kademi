@@ -94,7 +94,7 @@ var dataListWidgets = [];
           tbody.appendChild(rowItem);
         }
       }
-      DragDropFiles.init();
+      DragDropFiles.prototype.init();
     },
     dynamicSort: function(property) {
       var sortOrder = 1;
@@ -161,7 +161,6 @@ var dataListWidgets = [];
       var dt = e.dataTransfer;
       var files = dt.files;
       FileListWidgets.handleDragnDropFiles(files);
-
     }
   };
 

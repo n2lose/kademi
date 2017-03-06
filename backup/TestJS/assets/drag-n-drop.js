@@ -1,5 +1,14 @@
-var DragDropFiles = {
-  init: function() {
+(function() {
+  this.DragDropFiles = function() {
+    // check old browsers doesn't support 
+    if (!document.querySelectorAll ||
+      !('draggable' in document.createElement('span')) ||
+      window.opera
+    ) { return; }
+    this.init();
+  };
+
+  DragDropFiles.prototype.init = function() {
     //get the collection of draggable items and add their draggable attribute
     var items = document.querySelectorAll('[data-draggable="item"]');
     var len = items.length;
@@ -25,16 +34,15 @@ var DragDropFiles = {
     }, false);
 
     //drop event to allow the element to be dropped into valid targets
-
     document.addEventListener('drop', function(e) {
       //if this element is a drop target, move the item here 
       //then prevent default to allow the action (same as dragover)
       if (e.target.getAttribute('data-draggable') == 'target') {
         e.target.appendChild(item);
         e.preventDefault();
-        // DragDropFiles.serializeData(e.target);
       } else {
         // Todo: remove it in the dataListWidgets
+
         // if this element drop out of target, remove it
         item.parentNode.removeChild(item);
         item = null;
@@ -46,32 +54,6 @@ var DragDropFiles = {
     document.addEventListener('dragend', function(e) {
       item = null;
     }, false);
-  },
-  serializeData: function(widgetBase) {
-    var serilizeDataWidget = [];
-    var rowData = widgetBase.querySelectorAll('tr');
-    for (var i = 0; i < rowData.length; i++) {
-      var rowItem = rowData[i].querySelectorAll("td");
-      var oWidget = {
-        "name": rowItem[0].innerHTML,
-        "size": rowItem[1].innerHTML,
-        "dateModified": rowItem[2].innerHTML,
-      };
-      serilizeDataWidget.push(oWidget);
-    }
-    console.log(serilizeDataWidget);
-    return serilizeDataWidget;
-  },
-  duplicateWidget: function(objFooter) {
-    console.log(objFooter.parentElement.parentNode);
-    widgetId = objFooter.parentElement.parentNode.getAttribute("id");
+  };
 
-    var newWidget = document.getElementById(widgetId).cloneNode(true);
-    document.getElementById("panel").appendChild(newWidget);
-  }
-};
-
-(function() {
-  // init drag n drop
-  DragDropFiles.init();
 })();

@@ -1,6 +1,4 @@
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -13,10 +11,9 @@ body {
 
 table {
   max-width: 960px;
-  min-height: 300px;
+	min-height:300px;
   margin: 10px auto;
   border-collapse: collapse;
-  border: 1px solid #ccc;
 }
 
 caption {
@@ -31,17 +28,16 @@ thead th {
   color: #FFF;
 }
 
-tbody>tr {
+tr {
   background: #f4f7f8;
   border-bottom: 2px dashed #0069AA;
 }
 
-tbody>tr:nth-child(even) {
+tr:nth-child(even) {
   background: #e8eeef;
 }
 
-th,
-td {
+th, td {
   text-align: left;
   padding: 20px;
   font-weight: 300;
@@ -85,35 +81,33 @@ td {
 }
 
 .box__input {
-  text-align: center;
+    text-align: center;
 }
 
 .box__file {
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  width: 0.1px;
-  z-index: -1;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 0.1px;
+    z-index: -1;
 }
 
-.box__file+label {
-  cursor: pointer;
-  display: inline-block;
-  max-width: 80%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.box__file + label {
+    cursor: pointer;
+    display: inline-block;
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-.box__file+label:hover strong,
-.box__file:focus+label strong,
-.box__file.has-focus+label strong {
-  color: #098ADF;
+.box__file + label:hover strong, .box__file:focus + label strong, .box__file.has-focus + label strong {
+    color: #098ADF;
 }
 
 .box.has-file-upload .box__dragndrop {
-  display: inline;
+    display: inline;
 }
 
 .box.is-dragover {
@@ -124,29 +118,27 @@ td {
   display: inline-table;
 }
 
-
 /* draggable targets */
-
-[data-draggable="target"] {
-  float: left;
-  width: 450px;
-  min-height: 300px;
-  overflow-y: auto;
-  margin: 5px;
-  padding: 5px;
-  border: 1px solid #888;
-  background: #ddd;
-  color: #555;
+[data-draggable="target"]
+{
+	float:left;
+	width:450px;
+	min-height:300px;
+	overflow-y:auto;
+	margin:5px;
+	padding:5px;
+	border:1px solid #888;
+	background:#ddd;
+	color:#555;
 }
 
-
 /* draggable items */
-
-[data-draggable="item"] {
-  display: table-row;
-  list-style-type: none;
-  margin: 2px;
-  padding: 2px;
-  line-height: 1.3;
+[data-draggable="item"]
+{
+	display:table-row;
+	list-style-type:none;
+	margin:2px;
+	padding:2px;
+	line-height:1.3;
   width: 100%;
 }
