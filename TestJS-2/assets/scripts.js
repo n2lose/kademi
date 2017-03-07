@@ -3,12 +3,11 @@ var dataListWidgets = [];
 (function() {
   var FileListWidgets = {
     init: function() {
-
       var inputFile = document.getElementById("file");
       inputFile.addEventListener("change", this.handleBtnUploadFiles, false);
 
       var dropbox;
-      dropbox = document.getElementById("box__input");
+      dropbox = document.getElementById("box-upload");
       dropbox.addEventListener("dragenter", FileListWidgets.dragenter, false);
       dropbox.addEventListener("dragover", FileListWidgets.dragover, false);
       dropbox.addEventListener("drop", FileListWidgets.drop, false);
@@ -23,9 +22,9 @@ var dataListWidgets = [];
     },
     createRow: function(file) {
       var rowTR = document.createElement("tr");
-      var data = '<td class="row">' + file.name + '</td>';
-      data += '<td class="row">' + file.size + ' kb</td>';
-      data += '<td class="row">' + FileListWidgets.formatDate(file.lastModifiedDate) + '</td>';
+      var data = '<td>' + file.name + '</td>';
+      data += '<td>' + file.size + ' kb</td>';
+      data += '<td>' + FileListWidgets.formatDate(file.lastModifiedDate) + '</td>';
       rowTR.innerHTML = data;
       rowTR.setAttribute("data-draggable", "item");
       return rowTR;
@@ -142,11 +141,9 @@ var dataListWidgets = [];
     drop: function(e) {
       e.stopPropagation();
       e.preventDefault();
-
       var dt = e.dataTransfer;
       var files = dt.files;
       FileListWidgets.handleDragnDropFiles(files);
-
     }
   };
 
