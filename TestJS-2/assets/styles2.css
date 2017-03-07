@@ -1,8 +1,6 @@
-
 body {
   font-family: 'arial';
 }
-
 
 .flex {
   display: -webkit-flex;
@@ -14,7 +12,7 @@ body {
 }
 
 header {
-  width: 964px;
+  width: 960px;
   margin: auto;
   padding: 30px;
 }
@@ -27,7 +25,7 @@ sidebar {
 
 main {
   flex-basis: 70%;
-  padding: 10px;
+  padding: 5px;
 }
 
 .box-success,
@@ -54,9 +52,11 @@ main {
   outline-offset: -10px;
   transition: outline-offset 0.15s ease-in-out 0s, background-color 0.15s linear 0s;
 }
+
 .box .box-upload {
   text-align: center;
 }
+
 .box .box-icon {
   display: block;
   fill: #0069AA;
@@ -71,6 +71,7 @@ main {
 .box .box-dragndrop {
   display: inline;
 }
+
 .box-file {
   height: 0.1px;
   opacity: 0;
@@ -106,28 +107,33 @@ table {
   width: 100%;
 }
 
-table tr > th, table tr > td {
+table tr>th,
+table tr>td {
   padding: 5px;
 }
-table > tr > td {
+
+table>tr>td {
   text-align: center;
 }
-table > thead > tr {
+
+table>thead>tr {
   border-bottom: solid 1px #000;
 }
-table > tbody > tr {
+
+table>tbody>tr {
   border-bottom: solid 1px #000;
   border-bottom: 2px dashed #0069aa;
 }
 
 main {
   border: solid 1px #ccc;
-  clear:both;
+  clear: both;
 }
+
 .panel {
   background: #ddd;
-  width: 250px;
-  min-height: 200px;
+  width: 300px;
+  min-height: 300px;
   float: left;
   margin: 5px;
 }
@@ -135,15 +141,18 @@ main {
 .panel table {
   width: 100%;
 }
-.panel table > tbody {
-}
-.panel table > tfoot > tr > td {
+
+.panel table>tfoot>tr>td {
   text-align: center;
 }
 
+.panel .btn-duplicated {
+  margin: 10px 0;
+}
 
 
 /* draggable targets */
+
 [data-draggable="target"] {
   overflow-y: auto;
   padding: 5px;
@@ -152,7 +161,9 @@ main {
   color: #555;
 }
 
+
 /* draggable items */
+
 [data-draggable="item"] {
   display: table-row;
   list-style-type: none;

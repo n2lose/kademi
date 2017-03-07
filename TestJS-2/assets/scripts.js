@@ -22,7 +22,7 @@ var dataListWidgets = [];
     },
     createRow: function(file) {
       var rowTR = document.createElement("tr");
-      var data = '<td>' + file.name + '</td>';
+      var data = '<td style="width: 100px;">' + file.name + '</td>';
       data += '<td>' + file.size + ' kb</td>';
       data += '<td>' + FileListWidgets.formatDate(file.lastModifiedDate) + '</td>';
       rowTR.innerHTML = data;
