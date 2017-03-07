@@ -7711,5 +7711,20 @@ footer .copyright .left-border {
   #portfoliolist .portfolio {
     width: 100% !important;
   }
+  .navbar .navbar-collapse .navbar-nav {
+    margin: 0 -15px !important;
+  }
+  .navbar .navbar-collapse .navbar-nav > li > a:before {
+    content: none !important;
+  }
+  .navbar .navbar-collapse .navbar-nav > li > a:hover {
+    background: #32b0ee;
+  }
+  .navbar .navbar-collapse .navbar-nav > li a.active:before {
+    content: none !important;
+  }
+  .navbar .navbar-header > span {
+    display: none;
+  }
 }
 /* Custom, iPhone Retina */

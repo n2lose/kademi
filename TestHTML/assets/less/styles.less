@@ -770,6 +770,34 @@ footer {
       width:100% !important;
     }
   }
+
+  .navbar {
+    .navbar-collapse {
+      .navbar-nav {
+        margin: 0 -15px !important;
+        > li {
+          > a {
+            &:before {
+              content: none !important;
+            }
+            &:hover {
+              background: #32b0ee;
+            }
+          }
+          a.active {
+            &:before {
+              content: none !important;
+            }
+          }
+        }
+      }
+    }
+    .navbar-header {
+      > span {
+        display: none;
+      }
+    }
+  }
 }
 
 /* Custom, iPhone Retina */ 
