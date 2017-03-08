@@ -26,7 +26,7 @@ var DOMUtils = {
   },
   findElementsByTagName: function(element, foundTagName) {
     var childrendivs = [],
-      children = element.children;
+      children = document.getElementsByTagName(foundTagName);
     for (var i = 0; i < children.length; i++) {
       if (children[i].tagName == foundTagName.toUpperCase()) {
         childrendivs.push(children[i]);
@@ -79,9 +79,8 @@ var DragDropFiles = {
     //then prevent default to allow the action (same as dragover)
     if (e.target.getAttribute('data-draggable') == 'target') {
       var panel = e.target;
-      var tableTarget = DOMUtils.findElementsByTagName(panel, "table")[0];
-      var tbodyTarget = DOMUtils.findElementsByTagName(tableTarget, "tbody")[0];
-      console.log(itemRow);
+      var tableTarget = DOMUtils.findFirstElementByClassName(panel, "table-target");
+      var tbodyTarget = DOMUtils.findFirstElementByClassName(tableTarget, "body-content");
       tbodyTarget.appendChild(itemRow);
       e.stopPropagation();
       e.preventDefault();
@@ -132,29 +131,30 @@ var DragDropFiles = {
   },
   duplicateWidget: function(obj) {
     var panel = DOMUtils.findAncestor(obj, "panel");
+    if(panel) {
+      var tableTarget = DOMUtils.findFirstElementByClassName(panel, "table-target");
+      var dataWidget = DragDropFiles.tableToJson(tableTarget);
+      var newPanel = document.createElement("div");
+      newPanel.className = "panel";
+      newPanel.setAttribute("data-draggable", "target");
+      var strHTML = '<table class="table-target">';
+      strHTML += '<thead><tr><td>Name</td><td>Size</td><td>Date Modified</td></tr></thead>';
+      strHTML += '<tbody class="body-content">';
 
-    var tableTarget = DOMUtils.findElementsByTagName(panel, "table")[0];
-    console.log(tableTarget);
-    var dataWidget = DragDropFiles.tableToJson(tableTarget);
-    var newPanel = document.createElement("div");
-    newPanel.className = "panel";
-    newPanel.setAttribute("data-draggable", "target");
-    var strHTML = '<table>';
-    strHTML += '<thead><tr><td>Name</td><td>Size</td><td>Date Modified</td></tr></thead>';
-    strHTML += '<tbody>';
+      for (var i = 0; i < dataWidget.length; i++) {
+        strHTML += '<tr>';
+        strHTML += '<td>' + dataWidget[i].name + '</td>';
+        strHTML += '<td>' + dataWidget[i].size + '</td>';
+        strHTML += '<td>' + dataWidget[i].datemodified + '</td>';
+        strHTML += '</tr>';
+      }
 
-    for (var i = 0; i < dataWidget.length; i++) {
-      strHTML += '<tr>';
-      strHTML += '<td>' + dataWidget[i].name + '</td>';
-      strHTML += '<td>' + dataWidget[i].size + '</td>';
-      strHTML += '<td>' + dataWidget[i].datemodified + '</td>';
-      strHTML += '</tr>';
+      strHTML += '</tbody>';
+      strHTML += '</table>';
+      strHTML += '<button type="button" class="btn-duplicated" onclick="DragDropFiles.duplicateWidget(this);">Duplicated</button>';
+      newPanel.innerHTML = strHTML;
+      panel.parentNode.appendChild(newPanel);
     }
-
-    strHTML += '</tbody>';
-    strHTML += '</table>';
-    strHTML += '<button type="button" class="btn-duplicated" onclick="DragDropFiles.duplicateWidget(this);">Duplicated</button>';
-    newPanel.innerHTML = strHTML;
-    //console.log(strHTML);
+   
   }
 };
